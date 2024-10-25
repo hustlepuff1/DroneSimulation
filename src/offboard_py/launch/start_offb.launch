@@ -1,0 +1,10 @@
+<launch>
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/mavros_posix_sitl.launch">
+		<arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/DIDALOS_vtol/DIDALOS_vtol.sdf"/>
+		<arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
+	</include>
+
+	<!-- Our node to control the drone -->
+	<!-- node pkg="offboard_py" type="offb_node.py" name="offb_node_py" required="true" output="screen" / -->
+</launch>

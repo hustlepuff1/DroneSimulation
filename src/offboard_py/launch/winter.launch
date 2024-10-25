@@ -1,0 +1,13 @@
+<launch>
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/mavros_posix_sitl.launch">
+	
+		<arg name="z" default="0.1"/>
+		
+		<arg name="vehicle" default="DIDALOS_vtol"/>
+	
+		<arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/DIDALOS_vtol/DIDALOS_vtol.sdf"/>
+		<arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/winter.world"/>
+	</include>
+
+</launch>
